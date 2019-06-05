@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 그룹핑(Grouping) 요소들</title>
+</head>
+<body>
+
+  <!--
+    <main> 요소
+    <div> 요소
+    <blockquote> 요소
+    <p> 요소
+    <ul> 요소
+    <ol> 요소
+    <li> 요소
+    <dl> 요소
+    <dt> 요소
+    <dd> 요소
+    <figure> 요소
+    <figcaption> 요소
+    <hr> 요소
+    <address> 요소
+    <pre> 요소
+  -->
+
+  <!-- address -->
+  서울특별시 강남구 삼성로 648 SM ENTERTAINMENT
+  Communication Center 대표전화 02 6240 9800
+  <!-- 사업자 등록조회 확인: https://goo.gl/XqFuCC -->
+  대표 : 한세민, 남소영 사업자번호 114 81 63109
+  Copyright©2013 SM ENTERTAINMENT Co., Ltd. ©All rights reserved.
+
+
+  <!-- preserved text
+
+    <pre> 요소의 사용 예:
+      - 이메일, 빈 줄이 표시된 단락, 글 머리표가 붙은 줄로 표시된 목록 등에 사용.
+      - 컴퓨터 코드(언어) 표시 목적으로 사용.
+      - ASCII 아트 표시.
+
+    컴퓨터 코드, 출력, 키보드 블록을 나타내기 위해 pre 요소는 code, samp, kbd 요소와 함께 사용 가능.
+
+  -->
+
+  <!-- 아스키(ASCII) 코드 -->
+  ____  ∧ ∧
+     |＼ /(´～`)＼<변화구
+     |　|￣￣￣￣￣|
+     |　|＝みかん＝|
+   ＼|＿＿＿＿＿|
+
+
+  <!-- JavaScript 컴퓨터 프로그래밍 코드 -->
+  <p>다음은 패널(Panel) 생성자 함수(Constructor Function) 입니다.</p>
+
+  function Panel(element, canClose, closeHandler) {
+    this.element = element;
+    this.canClose = canClose;
+    this.closeHandler = function () { if (closeHandler) closeHandler() };
+  }
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 폼(Forms) 요소들</title>
+</head>
+<body>
+
+<!--
+
+  <form>
+    - 폼은 텍스트필드, 버튼, 체크박스와 같은 폼 컨트롤을 포함하는 웹 페이지의 컴포넌트를 말함.
+      사용자와 인터랙션을 수행한 결과(예: 검색)를 서버로 보낼 수 있다.
+
+      [사용 예시]
+        <form action="https://formspree.io/your@email.com" method="POST">
+          ...
+        </form>
+
+  <input>
+    - 사용자의 데이터를 입력 받을 수 있는 폼 컨트롤을 말함.
+      다양한 유형(Type) 설정이 가능하며, 유형에 맞는 역할을 수행한다.
+
+      [속성]
+        - name
+        - placeholder
+        - value
+        - readonly
+        - required
+        - disabled
+        - minlength
+        - maxlength
+        - list
+
+      [유형]
+        - text
+        - password
+        - checkbox
+        - radio
+        - file
+        - submit
+        - button
+        - image
+        - reset
+        - hidden
+        - search
+        - url
+        - tel
+        - email
+        - date
+        - month
+        - week
+        - time
+        - datetime-local
+        - number
+        - range
+        - color
+
+
+      [사용 예시]
+        <input type="text">
+        <input type="submit" value="전송">
+        <input type="button" value="버튼">
+        <input type="image" src="https://goo.gl/Ng66oQ" alt="체크인" width="20" height="20">
+        <input type="reset" value="초기화">
+        <input type="hidden" name="using-ajax" value="true">
+        <input type="number" name="" id="" min="100" step="10" max="1000" value="150">
+        <input type="range" name="" id="" min="10" step="5" max="25" value="15">
+        <input type="color" name="" id="" value="#F7CC60">
+
+  <label>
+    - 컨트롤에 레이블(이름)을 붙이고자 할 경우 사용.
+
+    [사용 예시]
+
+      1. <label>이름 <input type="text" placeholder="이두연"></label>
+
+      2. <label for="u_pass">비밀번호</label>
+         <input id="u_pass" name="u_pass" type="password" maxlength="8" placeholder="비밀번호 8자리를 입력해주세요">
+
+  <button>
+    - 버튼 폼 컨트롤로 사용자의 인터랙션을 받아 액션을 트리깅(방아쇠) 처리함.
+
+    [type]
+      - submit (초기 값)
+      - button
+      - reset
+
+      [사용 예시]
+        <button type="submit">전송</button>
+        <button type="button">버튼</button>
+        <button type="reset">초기화</button>
+
+  <select>
+    - 드롭 다운 메뉴(옵션을 선택 할 수 있는) 컨트롤을 말함.
+      내부에 <option> 요소를 포함하여 사용자에게 선택할 수 있도록 한다.
+      <option>을 묶어 그룹으로 만들고자 한다면 <optgroup> 요소를 사용하고,
+      label 속성을 사용해 그룹 이름을 설정한다.
+
+      [속성]
+        - name
+        - multiple
+        - disabled
+        - required
+        - size
+
+      [사용 예시]
+        <label for="user_hobby">취미</label>
+        <select name="user_hobby" id="user_hobby">
+          ...
+        </select>
+
+  <option>
+    - <select>, <datalist>, <optgroup> 내부에 포함 가능한 컨트롤로 항목을 만드는데 사용됨.
+
+    [속성]
+      - value
+      - selected
+      - label
+      - disabled
+
+    [사용 예시]
+      <label for="user_hobby">취미</label>
+      <select name="user_hobby" id="user_hobby" required>
+        <option value="0">없음</option>
+        <option value="1" selected>축구</option>
+        <option value="2" label="basketball" disabled>농구</option>
+        <option value="3">독서</option>
+        <option value="3">영화관람</option>
+      </select>
+
+  <optgroup>
+    - <option> 컨트를을 그룹지을 때 사용됨.
+
+    [속성]
+      - disabled
+      - label
+
+    [사용 예시]
+      <p>
+        <label for="user_hobby">취미</label>
+        <select name="user_hobby" id="user_hobby" required>
+          <option value="0">없음</option>
+          <optgroup label="구기종목">
+            <option value="1" selected>축구</option>
+            <option value="2" label="basketball" disabled>농구</option>
+          </optgroup>
+          <optgroup label="문화생활" disabled>
+            <option value="3">독서</option>
+            <option value="3">영화관람</option>
+          </optgroup>
+        </select>
+      </p>
+
+  <textarea>
+    - 멀티라인 일반 텍스트 편집 컨트롤을 말한다.
+
+    [속성]
+      - name
+      - placeholder
+      - rows
+      - cols
+      - readonly
+      - required
+      - disabled
+      - minlength
+      - maxlength
+
+    [사용 예시]
+      <div>
+        <label for="user_comments">코멘트</label>
+        <p>
+          <textarea name="user_comments" id="user_comments" cols="24" rows="5">남기고 싶은 말을 작성해주세요.</textarea>
+        </p>
+      </div>
+
+  <fieldset>
+    - 하나 이상의 폼 컨트롤을 그룹화 하는데 사용됨.
+
+    [속성]
+      - name
+      - disabled
+
+    [사용 예시]
+      <fieldset name="user_acount">
+        ...
+      </fieldset>
+
+  <legend>
+    - <fieldset> 컨트롤의 레이블(이름)을 설정하는 컨트롤.
+
+    [사용 예시]
+      <fieldset name="user_acount">
+        <legend>사용자 계정</legend>
+      </fieldset>
+
+  <output>
+    - 계산된 결과를 출력하는 컨트롤.
+
+    [속성]
+      - name
+      - for
+
+    [사용 예시]
+      <form oninput="result_sum.value = parseInt(n1.value + n2.value, 10)">
+        <p>
+          <input type="number" name="n1" value="4"> +
+          <input type="number" name="n2" value="10"> =
+          <output name="result_sum">14</output>
+        </p>
+      </form>
+
+  <datalist>
+    - 데이터 목록 요소 컨테이너 컨트롤.
+      내부에 <option> 요소를 사용해 항목을 만든다.
+
+      [사용 예시]
+        <label>이동할 웹주소 <input list="url_ex" type="url" name="user_url" id="user_url"></label>
+        <datalist id="url_ex">
+          <option value="http://naver.com">naver</option>
+          <option value="http://nate.com">nate</option>
+          <option value="http://google.com">google</option>
+          <option value="http://goo.gl">google short url</option>
+        </datalist>
+
+  <progress>
+    - 작업의 완료 진행 상황을 표시하는데 사용되는 컨트롤.
+
+    [속성]
+      - value
+      - max
+
+    [사용 예시]
+      <progress value="10" max="100">10%</progress>
+
+  <meter>
+    - 알려진 범위 내에서의 스칼라 측정 또는 분포 비율을 나타내는 컨트롤. (게이지(gauge)라고도 불림)
+      디스크 사용 현황, 쿼리 결과의 관련성, 특정 후보에 대한 투표율 등이 해당됨.
+
+    [속성]
+      - value
+      - min
+      - max
+      - low
+      - high
+      - optimum
+
+    [사용 예시]
+      <meter value="20" min="5" max="40">20</meter>
+
+-->
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>인터랙티브(Interactive) 요소</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+    }
+    .demo {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .container {
+      margin-top: 200px;
+      width: 80%;
+    }
+
+    .dialog {
+      max-width: 415px;
+      width: 80%;
+      border: 2px solid #3b99fc;
+      border-radius: 6px;
+      box-shadow: 1px 7px 11px rgba(118, 118, 118, 0.32);
+    }
+    .dialog-headline {
+      margin: 0 0 20px;
+      font-size: 24px;
+      font-weight: 400;
+    }
+    .dialog summary {
+      width: 100%;
+    }
+    .dialog dl {
+      margin-top: 20px;
+      margin-bottom: 0;
+      border-top: 1px solid #3b99fc;
+      padding-top: 20px;
+    }
+    .dialog dt {
+      float: left;
+      width: 145px;
+      margin-right: 10px;
+    }
+    .dialog dd {
+      margin-left: 0;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body class="demo">
+
+  <!--
+
+    <details> 요소
+      - 디스클로저 위젯(disclosure widget, 참고: https://goo.gl/uznvFY)으로 정보를 감추거나, 펼쳐서 보여준다.
+        모든 정보를 일시에 공개하지 않고 사용자의 요구에 맞춰 정보를 공개할 수 있다. (화면의 복잡함을 줄임)
+        아코디언(Accordion) 컴포넌트와 비슷하게 작동한다.
+
+        참고로 각주(footnote)에는 적합하지 않다.
+
+      [속성]
+        open - 페이지 로딩 시, 위젯을 펼쳐 표시하도록 설정
+
+      [사용 예시]
+        <details open>
+          ...
+        </details>
+
+
+    <summary> 요소
+      - <details> 요소의 레이블/캡션(제목), 서머리(요약) 등을 표시한다.
+        폼 <fieldset> 요소의 제목을 <legend>가 표시하듯 비슷하다.
+
+      [사용 예시]
+        <section class="progress window">
+          <h1>"Really Achieving Your Childhood Dreams" 파일 복사</h1>
+          <details>
+          <summary>복사중... <progress max="375505392" value="97543282"></progress> 25%</summary>
+          <dl>
+            <dt>초당 전송 속도:</dt>
+            <dd>452KB/s</dd>
+            <dt>로컬 파일이름:</dt>
+            <dd>/home/rpausch/raycd.m4v</dd>
+            <dt>원격 파일이름:</dt>
+            <dd>/var/www/lectures/raycd.m4v</dd>
+            <dt>재생시간:</dt>
+            <dd>01:16:27</dd>
+            <dt>컬러 프로파일:</dt>
+            <dd>SD (6-1-6)</dd>
+            <dt>영상 크기(너비×높이):</dt>
+            <dd>640×480</dd>
+          </dl>
+          </details>
+        </section>
+
+
+    <dialog> 요소
+      - 다이얼로그(Dialog, 참고: https://goo.gl/pQ7gSX)는
+        사용자의 결정 또는 정보 입력을 요구하는 컴포넌트를 말함.
+        '모달 윈도우' 또는 '대화상자'로도 불린다.
+
+      [속성]
+        open - 페이지 로딩 시, 위젯을 표시하도록 설정
+
+      [사용 예시]
+        <dialog open>
+          ...
+        </dialog>
+
+  -->
+
+
+  "html5.2-video-recture.mp4" 파일 복사
+
+  복사중... 25% 진행 중
+
+  초당 전송 속도: 723KB/s
+  로컬 파일이름: /Desktop/html5.2-video-recture.mp4
+  원격 파일이름: /Backup/html5.2-video-recture.mp4
+  재생시간: 00:14:38
+  컬러 프로파일: HD (1-1-1)
+  해상도(너비×높이): 1680×1050
+
+
+</body>
+</html>

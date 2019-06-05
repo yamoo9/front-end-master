@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML 메타데이터(Metadata) 요소들</title>
+</head>
+<body>
+
+  <!--
+
+    <head> 요소
+      - 문서의 제목과 스타일시트, 스크립트 링크 또는 선언을 포함하는 문서의 일반적인 정보(메타데이터)를 제공한다.
+        대부분 브라우저는 마크업에서 <head> 요소가 생략될 경우, 자동으로 <head> 요소를 생성하지만 일부는 그렇지 않다.
+
+        [자동으로 <head> 요소를 생성하지 않는 브라우저 환경]
+          - Android <= 1.6
+          - iPhone  <= 3.1.3
+          - Opera   <= 9.27
+          - Safari  <= 3.2.1.
+          - Nokia 90
+
+
+    <title> 요소
+      - 브라우저의 타이틀 바(Title Bar)나 페이지 탭에 보여지는 문서의 제목을 정의.
+        텍스트만 포함할 수 있으며 포함된 태그들은 해석되지 않음.
+
+
+    <meta> 요소
+      - 다른 메타 요소들(<title>, <base>, <link>, <style>)로 나타낼 수 없는 메타데이터를 정의할 때 사용.
+
+        [메타데이터의 종류]
+
+          - charset이 설정된 경우:
+              charset 선언. 즉 웹페이지를 작성하는 일련의 형식에 사용되는 문자 인코딩(charset)에 대한 설정.
+              이 속성보다 요소의 lang 속성이 우선하여 적용됨. (즉, 덮어쓰기 됨. 예: <div lang="fr">)
+
+          - http-equiv 속성이 설정된 경우:
+              pragma 지시어(Directive)로 일반적으로 웹서버가 제공하는 웹페이지가
+              어떻게 제공되어야 하는지에 대한 정보를 제공.
+
+              [예시]
+                ✤ HTML 5에서는 더 이상 아래와 같이 사용되길 권장하지 않음.
+                  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+                ✤ 3초 뒤에 url 값에 설정된 페이지로 이동하게 됨.
+                  <meta http-equiv="refresh" content="3;url=https://google.com">
+
+          - name 속성이 설정된 경우:
+              문서 수준 메타 데이터의 이름을 정의하며, content 속성 값을 통해 설정.
+
+        [속성]
+          - charset
+          - http-equiv
+          - content
+              이 속성은 컨텍스트에 따라 http-equiv또는 name속성 과 연결된 값을 제공.
+          - name
+            - application name:
+                웹 페이지에서 실행중인 웹 애플리케이션 이름 정의.
+                간단한 웹 페이지는 application-name 메타를 정의해서는 안됨.
+            - description
+                페이지의 내용에 대한 짧고 정확한 요약을 설정.
+            - keywords
+                쉼표로 구분된 문자열로 페이지의 내용과 관련된 키워드를 설정.
+            - author
+                문서 작성자의 이름을 정의.
+            - robots
+                검색 로봇이 웹 페이지를 크롤링하는 동작에 대한 정의.
+                  - index
+                  - noindex
+                  - follow
+                  - nofollow
+                  - noarchive
+                  - nosnippet
+                  - noimageindex
+            - viewport
+                (비표준) 초기 viewport 크기 설정에 관한 힌트를 제공.
+                이 속성은 몇 개의 모바일 디바이스에 의해서만 사용됨.
+                  - width
+                  - height
+                  - initial-scale
+                  - maximum-scale
+                  - minimum-scale
+                  - user-scalable
+
+
+    <link> 요소
+      - 현재 문서와 외부 리소스와의 관계(relation)를 명시.
+        이 요소는 스타일시트를 링크 하는데 가장 많이 사용됨.
+
+        [속성]
+          - rel      : 문서와의 관계 명시.
+          - type     : 링크된 리소스 MIME 타입 정의. (기본 적용: text/css)
+          - href     : 링크된 리소스 URL 설정.
+          - hreflang : 링크된 리소스의 언어 설정.
+          - media    : 링크된 리소스가 적용될 미디어(media)를 설정.
+
+        [사용 예시]
+
+          기본 스타일시트 설정
+            <link href="style.css" rel="stylesheet">
+
+          대체 스타일시트 설정: View > Page Style 메뉴에서 사용할 스타일시트를 고를 수 있다. (Chrome은 해당 X)
+            <link href="default.css" rel="stylesheet" title="기본 스타일">
+            <link href="fancy.css" rel="alternate stylesheet" title="팬시">
+            <link href="basic.css" rel="alternate stylesheet" title="베이직">
+
+
+    <style> 요소
+      - 문서나 문서 일부에 대한 스타일 정보를 포함.
+        기본적으로 CSS 언어가 사용됨.
+
+        [속성]
+          - type
+          - media
+          - scoped
+          - title
+          - disabled
+
+        [사용 예시]
+
+          일반적인 사용 예:
+            <style type="text/css">
+              body {
+                color: #323232;
+              }
+            </style>
+
+          scoped 속성 사용 예: ❖ 현재 제대로 지원하는 브라우저 없음.
+            <section>
+              <style scoped>
+                p { color: #902c1f; }
+              </style>
+              <p> ... </p>
+            </section>
+
+
+    <base> 요소
+      - 문서에 포함된 모든 상대 URL들의 기준 URL을 나타냄.
+        한 문서에 하나의 <base> 요소만 존재해야 함.
+
+        [사용 예시]
+          <base target="_blank" href="http://www.example.com/">
+
+  -->
+
+</body>
+</html>

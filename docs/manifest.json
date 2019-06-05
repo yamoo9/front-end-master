@@ -1,0 +1,16 @@
+{
+  "name": "야무의 Front-End Master",
+  "short_name": "front-end-master",
+  "start_url": "/?utm_source=homescreen",
+  "icons": [
+    {
+      "src": "assets/logo-152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#29435f",
+  "background_color": "#ffffff",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
