@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{104:function(t,n,e){"use strict";e.r(n);var a={async beforeMount(){await this.$auth.handleAuthentication();const t=this.$auth.getFromUri();window.location.replace(t)}},i=e(3),o=Object(i.a)(a,function(){var t=this.$createElement;return(this._self._c||t)("Loading")},[],!1,null,null,null);n.default=o.exports}}]);
