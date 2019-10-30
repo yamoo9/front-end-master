@@ -2,7 +2,8 @@
 
 '비디오 보기(Watch the Video)' 버튼을 클릭하면 비디오를 포함하는 프레임이 애니메이션 됩니다.
 적용된 애니메이션은 프레임이 회전하며 전체 화면 크기로 확대됩니다. 비디오는 프레임이 등장과 동시에 재생되며,
-'닫기(close, ×) 버튼'을 클릭 또는 비디오 재생이 종료되면 자동으로 비디오가 사라집니다.
+'닫기(close, ×) 버튼'을 클릭 또는 비디오 재생이 종료되면 자동으로 비디오가 사라집니다. 
+아래 이미지를 클릭하면 완성된 실습 결과를 볼 수 있습니다.
 
 [![Fullscreen Video Opening Animation](./assets/__design__/VOA-poster.png)](https://www.youtube.com/watch?v=FOsh3ZZU0Lo)
 
@@ -166,7 +167,7 @@ Pexels Video는 다양한 이미지와 비디오를 무료로 제공합니다.
 @import url("./demo/intro-animation.css");
 ```
 
-## 인터래션 디자인 (Interaction)
+## 인터랙션 디자인 (Interaction)
 
 구조, 스타일링, 애니메이팅이 완료되면 스크립트를 사용하여 인터랙션을 구현합니다.
 
