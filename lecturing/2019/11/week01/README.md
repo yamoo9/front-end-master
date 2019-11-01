@@ -1,19 +1,19 @@
 # 풀스크린 비디오 오프닝 애니메이션
 
-'비디오 보기(Watch the Video)' 버튼을 클릭하면 비디오를 포함하는 프레임이 애니메이션 됩니다.
-적용된 애니메이션은 프레임이 회전하며 전체 화면 크기로 확대됩니다. 비디오는 프레임이 등장과 동시에 재생되며,
-'닫기(close, ×) 버튼'을 클릭 또는 비디오 재생이 종료되면 자동으로 비디오가 사라집니다. 
-아래 이미지를 클릭하면 완성된 실습 결과를 볼 수 있습니다.
+'비디오 보기(Watch the Video)' 버튼을 클릭하면 비디오를 포함하는 프레임이 애니메이션 됩니다. 적용된 애니메이션은 프레임이 회전하며 전체 화면 크기로 확대됩니다. 비디오는 프레임이 등장과 동시에 재생되며, '닫기(close, `×`) 버튼'을 클릭 또는 비디오 재생이 종료되면 자동으로 비디오가 사라집니다. 아래 이미지를 클릭하면 완성된 실습 결과를 볼 수 있습니다.
 
 [![Fullscreen Video Opening Animation](./assets/__design__/VOA-poster.png)](https://www.youtube.com/watch?v=FOsh3ZZU0Lo)
 
 ## 디자인 리소스 (Design Resources)
 
-예제에 사용한 리소스는 Pexels Video의 콘텐츠입니다. 
-Pexels Video는 다양한 이미지와 비디오를 무료로 제공합니다.
+예제에 사용한 이미지 & 비디오 리소스는 Pexels Video의 콘텐츠입니다. Pexels Video는 다양한 이미지와 비디오를 무료로 제공합니다.
 
 - [Pexels](https://www.pexels.com, 'Photo')
 - [Pexels Video](https://www.pexels.com/videos, 'Video')
+
+예제에 사용된 로딩 스피너(spinner) 이미지는 [loading.io](https://loading.io)의 콘텐츠입니다. 기본 제공되는 스피너는 무료이고, 일부 스피너는 유료로 판매되고 있습니다.
+
+- [gooey-ring-spinner.svg](https://loading.io/spinners/gooeyring/index.gooey-ring-spinner.svg)
 
 ## 비주얼 디자인 (Visual Design)
 
@@ -27,16 +27,14 @@ Pexels Video는 다양한 이미지와 비디오를 무료로 제공합니다.
 
 ### 헤더 (Header)
 
-헤더 영역의 기본 골격을 작성한 후, 적절한 이름의 클래스 또는 언어 속성 등을 추가합니다.
+헤더 영역의 기본 골격을 작성한 후, 적절한 이름의 클래스(`class`) 또는 언어(`lang`) 속성 등을 추가합니다.
 
 ```html
 <header>
-  <h1>
-    Fullscreen Video Opening Animation
-  </h1>
+  <h1>Fullscreen Video Opening Animation</h1>
   <figure>
     <img src="./assets/logo/logo-symbol.svg" alt="" />
-    <img alt="Front-End Masters League" />
+    <img src="./assets/logo/logo.svg" alt="Front-End Masters League" />
   </figure>
 </header>
 ```
@@ -77,6 +75,7 @@ Pexels Video는 다양한 이미지와 비디오를 무료로 제공합니다.
       srcset="./assets/photos/cloak-tower@2x.jpg 2x"
       alt="푸른 하늘 아래 우뚝 선 시계 첨탑" />
   </figure>
+  <!-- 적절한 이름의 클래스 속성 설정 -->
   <div>
     <img 
       src="./assets/loading/gooey-ring-spinner.svg" 
@@ -85,7 +84,9 @@ Pexels Video는 다양한 이미지와 비디오를 무료로 제공합니다.
       <img src="./assets/icon/play.svg" alt="" />
       Watch the Video
     </button>
+    <!-- 적절한 이름의 클래스 속성 설정 -->
     <div>
+      <!-- 적절한 이름의 클래스 속성 설정 -->
       <div>
         <video
           preload="auto"
@@ -273,3 +274,6 @@ Pexels Video는 다양한 이미지와 비디오를 무료로 제공합니다.
 	bootstrap()
 })()
 ``` -->
+
+
+<!-- https://tympanus.net/codrops/2015/09/17/how-to-create-a-fullscreen-video-opening-animation/ -->
