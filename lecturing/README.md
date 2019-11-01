@@ -29,7 +29,8 @@ $ htmlhint /**/*.{htm,html}
 검사 결과
 
 ```console
-front-end-master git:master ❯ htmlhint ./lecturing/2019/11/week01/finished/index.html                                                                                
+front-end-master git:master ❯ htmlhint ./lecturing/2019/11/week01/finished/index.html
+
 /front-end-master/lecturing/2019/11/week01/finished/index.html:
   line 18, col 5: The script tag can not be used in head.
   line 24, col 20: Id and class value must lower case and split by dash.
@@ -165,6 +166,8 @@ front-end-master/js/main.js
 
 ## Prettier
 
+설정된 규칙에 맞게 코드를 자동으로 정리합니다.
+
 ### VS Code 확장
 
 [Prettier Now](https://marketplace.visualstudio.com/items?itemName=remimarsal.prettier-now) 익스텐션 설치
@@ -182,11 +185,13 @@ front-end-master/js/main.js
 
 ## Debugger for Chrome
 
+에디터에서 Chrome을 띄워 디버깅 할 수 있습니다.
+
 ### VS Code 확장
 
 [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) 익스텐션 설치
 
-![](https://github.com/Microsoft/vscode-chrome-debug/blob/master/images/demo.gif?raw=true)
+![](https://raygun.com/blog/images/debug-chrome/debug-chrome.png)
 
 ### 로컬 서버 구동
 
@@ -204,9 +209,6 @@ F5 키를 눌러 디버깅 구성 파일 `launch.json` 생성
 
 ```json
 {
-  // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
-  // 기존 특성에 대한 설명을 보려면 가리킵니다.
-  // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387 을(를) 방문하세요.
   "version": "0.2.0",
   "configurations": [
     {
@@ -219,3 +221,7 @@ F5 키를 눌러 디버깅 구성 파일 `launch.json` 생성
   ]
 }
 ```
+
+### Debugging for Chrome 대신 Chrome 브라우저에서 디버깅 하려면? 
+
+[Chrome DevTools에서 자바스크립트 디버깅 시작하기](https://developers.google.com/web/tools/chrome-devtools/javascript/?hl=ko) 문서 참고
