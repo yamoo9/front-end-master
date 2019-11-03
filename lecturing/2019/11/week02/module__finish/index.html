@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- SEO -->
+    <title>풀스크린 비디오 오프닝 애니메이션 - JavaScript + DOM API 컨트롤</title>
+    <meta name="description" content="풀스크린 비디오 오프닝 애니메이션 강의 데모" />
+    <meta name="keywords" content="html5 비디오, 애니메이션, 풀스크린, 이펙트, 웹 디자인, 강의" />
+    <meta name="author" content="yamoo9" />
+    <!-- Responsive Design Optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.png" />
+    <!-- Styling -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Scripting -->
+    <script type="module" src="./js/main.js" async></script>
+  </head>
+
+  <body>
+
+    <header>
+      <h1 lang="en" class="a11y-hidden a11y-hidden--focusedVisible" tabindex="0">
+        Fullscreen Video Opening Animation
+      </h1>
+      <figure role="group" lang="en">
+        <img class="logo__symbol" src="./assets/logo/logo-symbol.svg" alt="" />
+        <img class="logo" src="./assets/logo/logo.svg" alt="Front-End Masters League" />
+      </figure>
+    </header>
+
+    <main class="container--demo">
+      <h2 class="main__title" lang="en">
+        <img src="./assets/logo/play-fed-white.svg" alt="" />
+        Video Opening Animation
+      </h2>
+      <figure role="group" class="photos">
+        <img
+          class="photo__frame"
+          src="./assets/photos/green-grass.jpg"
+          srcset="./assets/photos/green-grass@2x.jpg 2x"
+          alt="녹색 수풀 사이" />
+        <img
+          class="photo__frame"
+          src="./assets/photos/woman.jpg"
+          srcset="./assets/photos/woman@2x.jpg 2x"
+          alt="붉은 티셔츠를 입고 아래로 내려다 보는 여성" />
+        <img
+          class="photo__frame"
+          src="./assets/photos/cloak-tower.jpg"
+          srcset="./assets/photos/cloak-tower@2x.jpg 2x"
+          alt="푸른 하늘 아래 우뚝 선 시계 첨탑" />
+      </figure>
+      <div class="action__wrapper">
+        <img class="action--loading" src="./assets/loading/gooey-ring-spinner.svg" alt="비디오 재생 준비 중..." />
+        <button type="button" class="action--play" lang="en">
+          <img src="./assets/icon/play.svg" alt="" />
+          Watch the Video
+        </button>
+        <div class="video__outer">
+          <div class="video__inner">
+            <video
+              class="video"
+              preload="auto"
+              poster="./assets/media/poster__city-rehan-verma.png"
+              src="./assets/media/city-rehan-verma.mp4">
+            </video>
+            <button type="button" class="action--close">
+              <img src="./assets/icon/close.svg" alt="닫기" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+
+</html>

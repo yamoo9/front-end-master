@@ -1,0 +1,41 @@
+.photos {
+  width: 684px;
+  height: 340px;
+  margin-top: 50px;
+  transition: all 0.4s ease;
+}
+.photo__frame {
+  position: relative;
+  border: var(--border-width) solid var(--color-white);
+  width: var(--width);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.photos .photo__frame:nth-child(1) {
+  transform: rotate(-10.62deg); 
+  left: 100px; 
+  top: 10px;
+}
+.photos .photo__frame:nth-child(2) {
+  transform: rotate(0.21deg); 
+  left: 25px;
+}
+.photos .photo__frame:nth-child(3) {
+  transform: rotate(16.11deg); 
+  right: 15px; 
+  top: 15px;
+}
+
+/* CSS 변수는 현재 미디어쿼리에는 사용할 수 없습니다.
+ * - https://www.w3.org/TR/css-variables-1/#using-variables
+ */
+@media screen and (min-height: 50em /* 800px */) {
+  .photos {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 50em /* 800px */) {
+  .photos {
+    transform: scale(1);
+  }
+}

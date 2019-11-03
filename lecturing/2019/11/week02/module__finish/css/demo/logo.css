@@ -1,0 +1,11 @@
+[class*="logo"] {
+  position: fixed;
+  z-index: 1;
+  top: 40px;
+}
+.logo__symbol {
+  left: 40px;
+}
+.logo {
+  right: 40px;
+}

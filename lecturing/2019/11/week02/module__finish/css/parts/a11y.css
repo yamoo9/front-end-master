@@ -1,0 +1,38 @@
+.a11y-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  white-space: nowrap;
+}
+
+.a11y-hidden--focusedVisible {
+  top: -50vh;
+  right: 50%;
+  transform: translateX(50%);
+  transition: all 0.45s ease-out;
+}
+
+.a11y-hidden--focusedVisible:focus {
+  /* 초기화 */
+  clip: unset;
+  clip-path: unset;
+  width: initial;
+  height: initial;
+  margin: 0;
+  white-space: initial;
+  /* 스타일링 */
+  z-index: 1000;
+  outline: none;
+  top: 60px;
+  padding: 0.6em;
+  border-radius: 4px;
+  line-height: 1;
+  font-size: 2rem;
+  background: #fff;
+  color: #2970c0;
+  box-shadow: 0 0 0 var(--thickness-focused) var(--color-focused);
+}

@@ -1,0 +1,38 @@
+/* Global Variables - 전역 변수 */
+:root {
+  /* color */
+  --color-white: #fff;
+  --color-light-blue: #1565a1;
+  --color-blue: #01297f;
+  --color-dark-blue: #01045f;
+
+  /* rem 단위 기준 */
+  --rem-by-unit: 10px;     
+}
+
+/* State Variables - 상태 변수 */
+
+:focus {
+  --color-focused: rgba(255, 255, 255, 0.3);
+  --thickness-focused: 6px;
+  outline: none;
+}
+
+/* Local(scope) Variables - 로컬(영역) 변수 */
+
+.container--demo {
+  --border-thickness: 1.5rem;
+}
+
+.photo__frame {
+  --width: 200px;
+  --border-width: calc(var(--width) * 0.03);
+}
+
+[class*="action--"] {
+  --color-shining: rgba(255, 255, 255, 0.18);
+}
+
+.video__inner {
+  --size: 30vw;
+}

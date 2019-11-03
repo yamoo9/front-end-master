@@ -1,0 +1,86 @@
+.container--demo {
+  border: 0;
+  animation: drawBorder 0.4s 0.2s ease-out forwards;
+}
+
+.logo__symbol {
+  opacity: 0;
+  transform: translate(-10vw, -5vw);
+  animation: transformNone 0.8s 0.5s ease-out forwards;
+}
+
+.logo {
+  opacity: 0;
+  transform: translate(10vw, -5vw);
+  animation: transformNone 0.6s 0.7s ease-out forwards;
+}
+
+.main__title {
+  opacity: 0;
+  transform: translateY(2vh);
+  animation: transformNone 0.8s 1s ease-out forwards;
+}
+
+.main__title img {
+  opacity: 0;
+  transform: translateY(-2vh);
+  animation: transformNone 0.8s 1.4s ease-out forwards;
+}
+
+.photos {
+  opacity: 0;
+  transform: translateY(-1vh);
+  animation: transformNone 0.7s 1.4s ease-out forwards;
+}
+
+.photos .photo__frame:nth-child(1) {
+  left: 100px; 
+  top: 10px;
+  transform: rotate(-7deg) translateX(110px); 
+  animation: photoFrame1 0.7s 1.8s cubic-bezier(0.18, 0.89, 0.32, 1.26) forwards;
+}
+.photos .photo__frame:nth-child(2) {
+  left: 25px;
+  transform: rotate(0.4deg); 
+  animation: photoFrame2 0.7s 1.8s cubic-bezier(0.01, 0.9, 0.29, 1.26) forwards;
+}
+.photos .photo__frame:nth-child(3) {
+  right: 15px; 
+  top: 15px;
+  transform: rotate(9deg) translate(-150px, 10px); 
+  animation: photoFrame3 0.7s 1.8s cubic-bezier(0.01, 0.9, 0.29, 1.26) forwards;
+}
+
+.action__wrapper {
+  opacity: 0;
+  transform: translateY(-2vh);
+  animation: transformNone 1s 1.8s ease-out forwards;
+}
+
+@keyframes transformNone {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes drawBorder {
+  to {
+    border: 20px solid #fff;
+  }
+}
+
+@keyframes photoFrame1 {
+  to {transform: rotate(-10.62deg); 
+  left: 100px; 
+  top: 10px; }
+}
+@keyframes photoFrame2 {
+  to {transform: rotate(0.21deg); 
+  left: 25px;}
+}
+@keyframes photoFrame3 {
+  to {transform: rotate(16.11deg); 
+  right: 15px; 
+  top: 15px;}
+}

@@ -1,0 +1,21 @@
+.main__title {
+  display: flex;
+  flex-flow: column;
+  margin-top: 60px;
+  font-size: 28px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: var(--color-white);
+}
+.main__title img {
+  margin-bottom: 20px;
+}
+
+
+@media screen and (min-height: 800px /* 700px */) {
+  .main__title {
+    margin-top: 172px;
+  }
+}
