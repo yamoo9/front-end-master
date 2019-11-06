@@ -12,7 +12,7 @@ HTML 페이지 전환, 키보드 내비게이션, 커스텀 커서 디자인을 
 
 [Figma](https://figma.com/downloads) 디자인 도구로 제작된 페이지 트랜지션 & 내비게이션 실습 디자인 시안 파일입니다. 다운로드 링크를 눌러 디자인 파일을 다운로드 한 후, Figma를 사용해 디자인을 분석합니다.
 
-[→ 다운로드](../../../../assets/Page-Transition.fig)
+[→ 다운로드](https://github.com/yamoo9/front-end-master/raw/master/assets/Page%20Transition.fig)
 
 <img src="../../../../assets/Page-Transition.png" alt />
 
