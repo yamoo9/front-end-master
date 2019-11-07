@@ -1,0 +1,6 @@
+body *,
+body *::before,
+body *::after {
+  box-sizing: border-box;
+  transition: all 0.4s ease;
+}

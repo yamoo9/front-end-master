@@ -1,0 +1,29 @@
+/**
+ * SVG Sprite 이미지
+ */
+#icon-symbol path {
+  fill: none;
+}
+
+/**
+ * icon
+ */
+.icon {
+  display: inline-block;
+}
+.icon-github {
+  width: 32px;
+  height: 32px;
+}
+.icon-keyboard {
+  width: 67px;
+  height: 44px;
+}
+.icon-logo {
+  width: 141px;
+  height: 78px;
+}
+.icon-symbol {
+  width: 49px;
+  height: 49px;
+}

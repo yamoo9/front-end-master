@@ -49,8 +49,6 @@ SVG 이미지 파일 최적화 및 스프라이트 이미지 제작에 활용할
 <br>
 <br>
 <br>
-<br>
-<br>
 
 ## 키보드 내비게이션 (Keyboard Navigation)
 
@@ -58,10 +56,6 @@ SVG 이미지 파일 최적화 및 스프라이트 이미지 제작에 활용할
 
 <img src="../../../../assets/keyboard-navigation.gif" alt style="width: 65%; height: auto;">
 
-<br>
-<br>
-<br>
-<br>
 <br>
 <br>
 <br>

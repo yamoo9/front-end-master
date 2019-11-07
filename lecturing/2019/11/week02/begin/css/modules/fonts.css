@@ -1,0 +1,19 @@
+@import url("//yamoo9.github.io/fonts/fonts.css");
+@import url('//fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+.font-openSans {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.font-uniSans {
+  font-family: "UniSansDemo-ThinCAPS", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+h1, h2, h3  {
+  margin-top: 0;
+  margin-bottom: 0;
+}
