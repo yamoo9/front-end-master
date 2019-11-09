@@ -43,7 +43,7 @@
   bottom: 25px;
   color: #fff;
 }
-.demo_navigation--item {
+.demo__navigation--item {
   display: inline-flex;
 }
 .demo__navigation--link {
