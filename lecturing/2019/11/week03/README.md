@@ -2,7 +2,7 @@
 
 캐러셀(Carousel) 컴포넌트를 라이브러리 도움 없이, 순수한 JavaScript 프로그래밍으로 구현해봅니다.
 
-1. [캐러셀 (General Carousel)](step-01-캐러셀)
+1. [캐러셀 (General Carousel)](#step-01-캐러셀)
 1. [인피니티 캐러셀 (Infinity Carousel)](#step-02-인피니티-캐러셀)
 1. [크로스 디렉션 캐러셀 (Cross Direction Carousel)](#step-03-크로스-디렉션-캐러셀)
 
