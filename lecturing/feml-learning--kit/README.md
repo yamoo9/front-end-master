@@ -44,7 +44,7 @@ src/ # 개발 디렉토리
 │   └── favicon.png
 ├── js/ # ES6(JS) 디렉토리
 │   ├── entry.js
-│   └── feml-info-animation.js
+│   └── feml__headerbar--animation.js
 ├── lib/ # 라이브러리 디렉토리
 │   ├── GSAP/ # 애니메이션 라이브러리
 │   │   ├── docs-link.html
@@ -77,7 +77,7 @@ src/ # 개발 디렉토리
 └── stylus/ # Stylus 디렉토리
     ├── config.styl
     ├── entry.styl
-    ├── feml-info.styl
+    ├── feml__headerbar.styl
     ├── modules/ # 모듈 디렉토리
     │   ├── a11y.styl
     │   ├── base.styl
