@@ -5,4 +5,4 @@
 import '../lib/IE/index'
 
 /* FEML 인포메이션 데모 (with GSAP) */
-import './feml-info-animation'
+import './feml__headerbar--animation'

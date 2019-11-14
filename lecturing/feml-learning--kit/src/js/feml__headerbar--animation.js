@@ -32,7 +32,7 @@
 import gsap from 'gsap'
 
 gsap.fromTo(
-	'.feml-info',
+	'.feml__headerbar',
 	0.4,
 	{ autoAlpha: 0, y: -100 },
 	{ autoAlpha: 1, y: 0, delay: 0.3 }
