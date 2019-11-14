@@ -1,4 +1,4 @@
-# FEML 러닝 킷
+# FEML 러닝 킷(Learning Kit)
 
 <abbr title="Front-End Masters League">FEML</abbr> 모듈B 과정에서 다루는 데모 실습을 위한 러닝 킷입니다.
 

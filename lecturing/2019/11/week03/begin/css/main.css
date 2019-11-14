@@ -1,0 +1,149 @@
+/** ----------------------------
+ * common
+ */
+figure {
+	margin: 0;
+}
+
+img {
+	vertical-align: middle;
+}
+
+a {
+	color: inherit;
+}
+
+body *,
+body *::before,
+body *::after {
+	box-shadow: border-box;
+	transition: all 0.2s;
+}
+
+:focus {
+	transition: none;
+	outline: 5px solid rgba(255, 255, 255, 0.5);
+	outline-offset: 5px;
+}
+
+.a11y-hidden {
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+	clip-path: polygon(0 0, 0 0, 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	white-space: nowrap;
+	visibility: hidden;
+}
+
+.reset-list {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+/** ----------------------------
+ * demo
+ */
+.demo {
+	width: 100vw;
+	min-height: 100vh;
+}
+.demo.has-red {
+	background: #962d3b;
+}
+.demo.has-black {
+	background: #272528;
+}
+.demo.has-green {
+	background: #143f34;
+}
+.demo.has-blue {
+	background: #5ca1af;
+}
+
+/** ----------------------------
+ * header
+ */
+.demo__header {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	min-height: 5vh;
+}
+.demo__header--symbol,
+.demo__header--logo {
+	position: fixed;
+}
+.demo__header--symbol {
+	top: 37px;
+	left: 25px;
+}
+.demo__header--symbol svg {
+	width: 49px;
+	height: 49px;
+}
+.demo__header--logo {
+	top: 25px;
+	right: 25px;
+}
+.demo__header--logo svg {
+	width: 137px;
+	height: 70px;
+}
+.demo__header--navigation {
+	margin-top: 50px;
+	color: #fff;
+}
+.demo__header--navigation ul {
+	display: inline-flex;
+	justify-content: center;
+}
+.demo__header--navigation li {
+	display: inline-flex;
+	justify-content: center;
+	margin-right: 10px;
+	margin-left: 10px;
+	padding: 0.1em;
+}
+.demo__header--navigation a {
+	position: relative;
+	padding: 0.1em 0.9em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font: 800 14px/1 "Open Sans";
+}
+.demo__header--navigation a:hover {
+	transform: scale(1.2);
+}
+.demo__header--navigation .is-active::before {
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	width: 40%;
+	height: 2px;
+	background: rgba(255, 255, 255, 0.5);
+	transform: translateX(-50%);
+}
+.demo__header--navigation a:hover::before {
+	transform: scale(0);
+}
+
+/** ----------------------------
+ * main
+ */
+.demo__main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 60vh;
+	margin-top: 100px;
+}
+
+.container {
+	width: 67%;
+	margin: 0 auto;
+}
