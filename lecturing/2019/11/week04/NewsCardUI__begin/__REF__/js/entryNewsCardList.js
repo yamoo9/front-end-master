@@ -43,7 +43,7 @@ const refereneceDomEls = () => {
 }
 
 /**
- * 검색한 뉴스 API 데이터를 가져와 뉴스 카드 그리드를 생성하는 함수
+ * 검색한 뉴스 API 데이터를 가져와 뉴스 카드 그리드 생성 명령을 실행하는 함수
  */
 const loadNews = () => {
 	// 임의의 검색어 설정
@@ -51,7 +51,7 @@ const loadNews = () => {
 	// 뉴스 API에 검색어 전달 (비동기 통신 후, 데이터 반환 요청)
 	newsapi
 		.get(`everything?q=${search}`)
-		// 통신 성공 시, 뉴스 카드 그리드 생성
+		// 통신 성공 시, 뉴스 카드 그리드 생성 함수 실행
 		.then(createNewsCardGrid)
 		// 오류 발생 시, 오류 메시지 출력
 		.catch((error) => console.error(error.message))
