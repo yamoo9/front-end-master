@@ -6,12 +6,12 @@ Ajax 프로그래밍 + REST API를 사용해 서비스 하는 개발 과정을 �
 
 ## 튜토리얼
 
-1. [HTML 마크업](#html-마크업)  
+- [HTML 마크업](#html-마크업)  
   - [뉴스 카드 그리드 (News Card Grid)](#뉴스-카드-그리드-news-card-grid)  
   - [로딩 스피너 (Loading Spinner)](#로딩-스피너-loading-spinner)
-1. [CSS 스타일링](#css-스타일링)  
+- [CSS 스타일링](#css-스타일링)  
   - [뉴스 카드 UI (NewsCard UI)](#뉴스-카드-ui-newscard-ui)
-1. [ES6 프로그래밍](#es6-프로그래밍)  
+- [ES6 프로그래밍](#es6-프로그래밍)  
   - [조건 별 엔트리 페이지 설정](#조건-별-엔트리-페이지-설정)  
   - [NewsCardList 엔트리 페이지](#newscardlist-엔트리-페이지)  
   - [News API 서비스](#news-api-서비스)     
