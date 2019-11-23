@@ -1,0 +1,135 @@
+$color-white ?= #fff
+$color-darkgray ?= #302a46
+$color-violet ?= #4527A0
+
+$breakpoint-md ?= 780px
+$breakpoint-lg ?= 1200px
+
+::selection
+  background $color-darkgray
+  color $color-white
+
+body
+  background #f2f2f2
+
+.feml__navigationbar
+  position sticky
+  z-index 100
+  top 0
+  background rgba($color-white, 0.4)
+  backdrop-filter blur(3px)
+  color $color-darkgray
+  ul
+    display flex
+    justify-content center
+    border-bottom 1px solid rgba($color-darkgray, 0.3)
+    box-shadow 0 2px 6px rgba($color-darkgray, 0.2)
+    padding 0.3em
+  li
+    padding 0.8em 0.4em
+  a
+    padding 0.4em 1em
+    color inherit
+    font-weight bold
+    text-decoration none
+    &.current-page
+      background $color-darkgray
+      color $color-white
+      border-radius 30px
+
+.loading-spinner
+  position fixed
+  z-index 10
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  width remify(300px)
+  height remify(300px)
+
+.news__card--grid
+  display flex
+  flex-flow row wrap
+  justify-content space-evenly
+  max-width remify($breakpoint-lg)
+  margin remify(45px) auto
+  padding 0 remify(20px)
+  &.dont-has-children
+    display flex
+    justify-content center
+    align-items center
+    min-height 60vh
+    &::before
+      content '뉴스 카드가 존재하지 않습니다.'
+      font-size remify(24px)
+      text-align center
+      color #999
+  @media (min-width: $breakpoint-lg)
+    justify-content flex-start
+    &.dont-has-children::before
+      font-size remify(40px)
+
+.news__card
+  overflow hidden
+  position relative
+  flex 1 100%
+  margin-bottom remify(25px)
+  border-radius 6px
+  border 1px solid darken($color-white, 10)
+  background $color-white
+  color desaturate(invert($color-white), 10)
+  line-height 1.5
+  transition-duration 0.4s
+  font-size remify(14px)
+  &:hover
+    transform translateY(-1px)
+    box-shadow 0 10px 16px rgba(10,10,10,0.23), 
+               0 2px 3px rgba(0,4,20,0.1)
+  @media (min-width: $breakpoint-md)
+    flex 0 1 47%
+  @media (min-width: $breakpoint-lg)
+    flex 0 1 31%
+    margin-left 1%
+    margin-right 1%
+
+  img
+    object-fit cover
+    width 100%
+    height remify(300px)
+    margin-bottom remify(20px)
+    border-top-left-radius 6px
+    border-top-right-radius 6px
+    filter: saturate(0.39) brightness(0.95)
+    transition-duration 0.8s
+    &:hover
+      filter: none
+    & ~ *:not(button)
+      margin-left remify(30px)
+      margin-right remify(30px)
+
+  a
+    position relative
+    display block
+    color inherit
+    text-decoration none
+    margin-bottom remify(30px)
+    &::before
+      content ''
+      position absolute
+      top 0
+      right 100%
+      bottom 0
+      left 0
+      background rgba($color-violet, 0.2)
+      transform skew(-10deg)
+    &:hover
+      color $color-violet 
+      &::before
+        right 77%
+
+.news__card--button
+  position absolute
+  z-index 10
+  top 20px
+  right 20px
+  height remify(36px)
+  font-size remify(38px)

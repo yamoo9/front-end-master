@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 검색 엔진 최적화 (SEO) -->
+    <title>뉴스 북마크(News Bookmark)</title>
+    <meta name="description" content="Front-End Masters League 학습용 데모 러닝 킷" />
+    <meta name="keywords" content="Front-End Masters League, 학습, 데모, 러닝 킷, 웹 디자인, 강의" />
+    <meta name="author" content="yamoo9" />
+    <!-- IE 호환성 (IE 최신 버전으로 작동) -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- 반응형 디자인 (RWD) 최적화 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS 스타일시트 -->
+    <link rel="stylesheet" href="css/entry.css" />
+    <!-- 파비콘 (Favicon) -->
+    <link rel="shortcut icon" href="assets/favicon.png" />
+    <!-- JavaScript 프로그래밍 (Babel 사용) -->
+    <!-- defer 속성 브라우저 호환성: lib/IE/index.js 참고 -->
+    <script src="js/entry.js" defer></script>
+  </head>
+
+  <body>
+
+    <!-- 헤더바 -->
+    <div class="feml__headerbar" role="banner">
+      <h1>
+        뉴스 카드 그리드 <abbr title="User Interface">UI</abbr> (<abbr title="ECMAScript">ES</abbr>6 classes + <abbr title="Ashncronous JavaScript And XML">Ajax</abbr> + <abbr title="REpresentational State Transfer">REST</abbr> <abbr title="Application Programming Interface">API</abbr>(with <abbr title="JavaScript Object Notation">JSON</abbr> Server))
+      </h1>
+    </div>
+
+    <!-- 내비게이션 바 -->
+    <nav class="feml__navigationbar">
+      <ul class="reset-list">
+        <li><a href="/">News List</a></li>
+        <li><a href="./" class="current-page">News Bookmark</a></li>
+      </ul>
+    </nav>
+
+    <!-- News Card Grid -->
+    <div class="news__card--grid"></div>
+
+    <!-- 로딩 스피너 -->
+    <svg class="loading-spinner" viewbox="0 0 100 100">
+      <defs>
+        <path id="path" d="M50 15A11 35 0 0 1 50 85A11 35 0 0 1 50 15" fill="none"></path>
+        <path id="patha" d="M0 0A11 35 0 0 1 0 70A11 35 0 0 1 0 0" fill="none"></path>
+      </defs>
+      <g transform="rotate(0 50 50)">
+        <use xlink:href="#path" stroke="#b5ccf1" stroke-width="1"></use>
+      </g>
+      <g transform="rotate(60 50 50)">
+        <use xlink:href="#path" stroke="#b5ccf1" stroke-width="1"></use>
+      </g>
+      <g transform="rotate(120 50 50)">
+        <use xlink:href="#path" stroke="#b5ccf1" stroke-width="1"></use>
+      </g>
+      <g transform="rotate(0 50 50)">
+        <circle cx="50" cy="15" r="6" fill="#292664">
+          <animatemotion dur="1.4492753623188404s" repeatcount="indefinite" begin="0s">
+            <mpath xlink:href="#patha"></mpath>
+          </animatemotion>
+        </circle>
+      </g>
+      <g transform="rotate(60 50 50)">
+        <circle cx="50" cy="15" r="6" fill="#667395">
+          <animatemotion dur="1.4492753623188404s" repeatcount="indefinite" begin="-0.16666666666666666s">
+            <mpath xlink:href="#patha"></mpath>
+          </animatemotion>
+        </circle>
+      </g>
+      <g transform="rotate(120 50 50)">
+        <circle cx="50" cy="15" r="6" fill="#94a9ce">
+          <animatemotion dur="1.4492753623188404s" repeatcount="indefinite" begin="-0.3333333333333333s">
+            <mpath xlink:href="#patha"></mpath>
+          </animatemotion>
+        </circle>
+      </g>
+    </svg>
+
+  </body>
+
+</html>

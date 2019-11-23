@@ -1,0 +1,6 @@
+fontSize(value)
+  font-size: value
+  if (value is inherit)
+    // inherit 속성 값은 단위(unit)이 없어 아무 것도 안함
+  else
+    font-size: remify(value)
