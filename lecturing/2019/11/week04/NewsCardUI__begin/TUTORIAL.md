@@ -6,12 +6,12 @@ Ajax 프로그래밍 + REST API를 사용해 서비스 하는 개발 과정을 �
 
 ## 튜토리얼
 
-- [HTML 마크업](#html-마크업)  
+1. [HTML 마크업](#html-마크업)  
   - [뉴스 카드 그리드 (News Card Grid)](#뉴스-카드-그리드-news-card-grid)  
   - [로딩 스피너 (Loading Spinner)](#로딩-스피너-loading-spinner)
-- [CSS 스타일링](#css-스타일링)  
+1. [CSS 스타일링](#css-스타일링)  
   - [뉴스 카드 UI (NewsCard UI)](#뉴스-카드-ui-newscard-ui)
-- [ES6 프로그래밍](#es6-프로그래밍)  
+1. [ES6 프로그래밍](#es6-프로그래밍)  
   - [조건 별 엔트리 페이지 설정](#조건-별-엔트리-페이지-설정)  
   - [NewsCardList 엔트리 페이지](#newscardlist-엔트리-페이지)  
   - [News API 서비스](#news-api-서비스)     
@@ -232,7 +232,7 @@ body
 
 ### 조건 별 엔트리 페이지 설정
 
-카드 뉴스 리스트, 뉴스 북마크 페이지를 엔트리 파일에서 나눠 실행하도록 코드를 분기합니다.
+뉴스 카드 리스트, 뉴스 카드 북마크 페이지를 엔트리 파일에서 나눠 실행하도록 코드를 분기합니다.
 
 > 각 페이지 URL 마다 호출하는 코드를 다르게 적용하는 것입니다. ES 모듈은 조건 문 안에서 처리가 안됩니다. 이런 경우 CommonJS 진영의 모듈 로드 방식을 사용해 조건 처리할 수 있습니다. (웹 표준 아님)
 
@@ -240,13 +240,13 @@ body
 // 북마크 페이지 접속 유무 파악
 const isBookmarkPage = window.location.href.includes('bookmark')
 
-// 카드 뉴스 리스트 페이지
+// 뉴스 카드 리스트 페이지
 if (!isBookmarkPage) {
-	require('./entryNewsCardUI')
+	require('./entryNewsCardList')
 }
-// 뉴스 북마크 페이지
+// 뉴스 카드 북마크 페이지
 else {
-	// require('./entryNewsBookmarkUI')
+	require('./entryNewsCardBookmark')
 }
 ```
 
